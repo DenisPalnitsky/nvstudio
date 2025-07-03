@@ -1,0 +1,117 @@
+# Architect Portfolio Static Website - Cursor Rules
+
+## Project Context
+This is a static portfolio website for an architect, built on the "Forty by HTML5 UP" template. The site showcases architectural projects, design philosophy, and professional services without requiring a backend or database.
+
+## Core Principles
+- **Visual First**: Every change should enhance the visual presentation of architectural work
+- **Professional Presentation**: Maintain a clean, sophisticated aesthetic appropriate for architecture
+- **Performance**: Keep the site fast-loading with optimized images and minimal JavaScript
+- **Responsive Design**: Ensure flawless display across all devices (desktop, tablet, mobile)
+- **Accessibility**: Follow WCAG guidelines for inclusive design
+
+## File Structure Guidelines
+- `index.html` - Main homepage with project highlights
+- `landing.html` - Project detail template (duplicate for individual projects)
+- `generic.html` - About page, services, or other content pages
+- `elements.html` - Style guide and UI elements showcase
+- `images/` - Project photos, renderings, and architectural imagery
+- `assets/css/` - Compiled stylesheets (avoid editing directly)
+- `assets/sass/` - SCSS source files for styling customization
+
+## Content Strategy
+- **Project Showcases**: Each project should have high-quality images, brief descriptions, and key details (location, year, type, size)
+- **Hero Sections**: Use striking architectural photography for visual impact
+- **Grid Layouts**: Leverage the template's tile system for project galleries
+- **Typography**: Maintain clean, readable typography that complements architectural content
+
+## Image Guidelines
+- **Format**: Use WebP for modern browsers, with JPEG fallbacks
+- **Dimensions**: Maintain consistent aspect ratios (16:9 or 4:3 for hero images)
+- **Optimization**: Compress images without sacrificing quality
+- **Alt Text**: Provide descriptive alt text for all architectural images
+- **Naming**: Use descriptive filenames (e.g., `residential-project-exterior-01.jpg`)
+
+## HTML Best Practices
+- Use semantic HTML5 elements (`<section>`, `<article>`, `<header>`, `<nav>`)
+- Include proper meta tags for SEO and social sharing
+- Ensure all images have alt attributes
+- Use proper heading hierarchy (h1 > h2 > h3)
+- Add structured data for better SEO when relevant
+
+## CSS/SCSS Guidelines
+- Customize variables in `assets/sass/libs/_vars.scss` for brand colors and typography
+- Create new component files in `assets/sass/components/` for custom elements
+- Use BEM methodology for new CSS classes
+- Maintain mobile-first responsive design approach
+- Avoid !important declarations unless absolutely necessary
+
+## JavaScript Guidelines
+- Keep JavaScript minimal and focused on user experience
+- Use existing jQuery plugins when possible
+- Ensure all interactions are accessible via keyboard
+- Test all functionality across different browsers
+- Avoid heavy frameworks - maintain the lightweight nature
+
+## Content Updates
+- **Project Pages**: When adding new projects, duplicate `landing.html` and customize
+- **Navigation**: Update menu items in all HTML files when adding new pages
+- **Footer**: Keep contact information and social links current
+- **About Section**: Focus on architectural philosophy and professional credentials
+
+## Performance Considerations
+- Lazy load images below the fold
+- Minify CSS and JavaScript for production
+- Use appropriate image sizes for different screen resolutions
+- Leverage browser caching for static assets
+- Consider using a CDN for better global performance
+
+## SEO Optimization
+- Include relevant keywords naturally in content
+- Add Open Graph meta tags for social sharing
+- Use descriptive page titles and meta descriptions
+- Implement proper heading structure
+- Add schema markup for professional services
+
+## Accessibility Requirements
+- Ensure sufficient color contrast ratios
+- Provide keyboard navigation for all interactive elements
+- Use descriptive link text and button labels
+- Include proper ARIA labels where needed
+- Test with screen readers
+
+## Common Customizations
+- **Color Scheme**: Modify `$color-accent` and `$color-primary` in variables
+- **Typography**: Update font families and sizes in typography settings
+- **Layout**: Adjust grid layouts and spacing in component files
+- **Contact Forms**: Integrate with services like Formspree or Netlify Forms
+- **Analytics**: Add Google Analytics or similar tracking code
+
+## Development Workflow
+1. Make changes to SCSS files, not compiled CSS
+2. Test changes across multiple devices and browsers
+3. Optimize images before adding to the images folder
+4. Update navigation menus when adding new pages
+5. Test form functionality if using contact forms
+6. Validate HTML and check for accessibility issues
+
+## Deployment Notes
+- Site auto-deploys to GitHub Pages on push to main branch
+- Ensure all links are relative for proper GitHub Pages functionality
+- Test deployment URL before announcing site updates
+- Monitor GitHub Actions for deployment status
+
+## Brand Guidelines
+- Maintain professional, minimalist aesthetic
+- Use high-quality architectural photography
+- Keep color palette sophisticated and neutral
+- Ensure typography is clean and readable
+- Balance white space with content for visual breathing room
+
+## When Making Changes
+Always consider:
+- How will this look on mobile devices?
+- Does this maintain the professional aesthetic?
+- Will this impact site loading speed?
+- Is this accessible to all users?
+- Does this showcase the architectural work effectively? 
