@@ -1,7 +1,7 @@
-# Image Requirements for NV Studio Design Website
+# Image Requirements for NV Studio Design Website - COMPLETED ✅
 
 ## Overview
-This document outlines all the images needed for the migrated NV Studio Design website. These images should be sourced from the original website or created to match the architectural design aesthetic.
+This document outlines all the images that have been successfully integrated into the NV Studio Design website. All images have been sourced from the provided portfolio folders and are now showcased across the website.
 
 ## Required Images
 
