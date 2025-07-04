@@ -161,13 +161,20 @@
 
 		@include breakpoint('<=small') {
 			article {
-				@include padding(3em, 1.5em);
-				height: 16em;
+				@include padding(2.5em, 1.25em);
+				height: 14em;
 				max-height: none;
 				min-height: 0;
 
 				h3 {
-					font-size: 1.5em;
+					font-size: 1.4em;
+					line-height: 1.3;
+					margin-bottom: 0.5em;
+				}
+				
+				header.major p {
+					font-size: 0.9em;
+					line-height: 1.4;
 				}
 			}
 		}
@@ -176,8 +183,21 @@
 			display: block;
 
 			article {
-				height: 20em;
+				@include padding(2em, 1em);
+				height: 12em;
 				width: 100% !important;
+				margin-bottom: 1em;
+				
+				h3 {
+					font-size: 1.25em;
+					line-height: 1.25;
+					margin-bottom: 0.5em;
+				}
+				
+				header.major p {
+					font-size: 0.85em;
+					line-height: 1.3;
+				}
 			}
 		}
 	}
