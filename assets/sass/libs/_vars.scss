@@ -12,36 +12,38 @@
 
 // Size.
 	$size: (
-		border-radius:		4px,
+		border-radius:		2px,
 		element-height:		2.75em,
-		element-margin:		2em,
-		inner:				65em
+		element-margin:		3em,
+		inner:				68em
 	);
 
 // Font.
 	$font: (
-		family:				('Source Sans Pro', Helvetica, sans-serif),
-		family-fixed:		('Courier New', monospace),
-		weight:				300,
+		family:				('IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif),
+		family-heading:		('IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif),
+		family-fixed:		('IBM Plex Mono', 'Courier New', monospace),
+		weight:				400,
+		weight-medium:		500,
 		weight-bold:		600,
-		letter-spacing:		0.025em,
-		letter-spacing-alt:	0.25em
+		letter-spacing:		-0.01em,
+		letter-spacing-alt:	0.08em
 	);
 
 // Palette.
 	$palette: (
-		bg:					#242943,
-		bg-alt:				#2a2f4a,
-		fg:					#ffffff,
-		fg-bold:			#ffffff,
-		fg-light:			rgba(244,244,255,0.2),
-		border:				rgba(212,212,255,0.1),
-		border-bg:			rgba(212,212,255,0.035),
-		highlight:			#9bf1ff,
-		accent1:			#6fc3df,
-		accent2:			#8d82c4,
-		accent3:			#ec8d81,
-		accent4:			#e7b788,
-		accent5:			#8ea9e8,
-		accent6:			#87c5a4
+		bg:					#ffffff,
+		bg-alt:				#fafafa,
+		fg:					#2a2a2a,
+		fg-bold:			#1a1a1a,
+		fg-light:			#7a7a7a,
+		border:				#e5e5e5,
+		border-bg:			#f5f5f5,
+		highlight:			#2a2a2a,
+		accent1:			#4a5568,
+		accent2:			#5a6c7d,
+		accent3:			#6b7280,
+		accent4:			#556b7c,
+		accent5:			#4e5d6c,
+		accent6:			#5c6b79
 	);

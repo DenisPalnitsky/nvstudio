@@ -6,38 +6,39 @@
 /* Project Cards */
 .project-card {
 	position: relative;
-	
+	border: 1px solid _palette(border);
+
 	.image {
 		display: block;
 		width: 100%;
 		overflow: hidden;
-		border-radius: _size(border-radius);
-		
+		border-radius: 0;
+
 		img {
 			width: 100%;
 			height: auto;
 			display: block;
 			transition: transform 0.3s ease;
 		}
-		
+
 		&:hover img {
-			transform: scale(1.05);
+			transform: scale(1.03);
 		}
 	}
-	
+
 	header.major {
 		padding: 1.5em 0 1em 0;
-		
+
 		h3 {
 			margin-bottom: 0.5em;
-			
+
 			a {
-				color: inherit;
+				color: _palette(fg-bold);
 				text-decoration: none;
-				border-bottom: 0;
-				
+				border-bottom: 1px solid transparent;
+
 				&:hover {
-					color: _palette(highlight) !important;
+					border-bottom-color: _palette(fg-bold);
 				}
 			}
 		}

@@ -4,6 +4,216 @@
 
 Static portfolio website built on the "Forty" HTML5 UP template for a residential architecture studio in the GTA.
 
+Below is a **more specific, concrete version** of the same high-level document, explicitly framed around **NV Studio Design** and its current positioning.
+It’s still **non-detailed**, but now very clear about *what exactly is being built and why*.
+
+---
+
+# NV Studio Design — Website High-Level Plan
+
+**Residential Architecture & Interior Design | GTA / Ontario**
+
+Website: [https://www.nvstudiodesign.com/](https://www.nvstudiodesign.com/)
+
+---
+
+## 1. Purpose of This Website
+
+We are rebuilding / restructuring the **NV Studio Design** website to clearly present the studio as a **residential architecture and interior design practice** focused on the **Greater Toronto Area and Ontario**.
+
+The website should:
+
+* Clearly explain **what NV Studio Design does**
+* Showcase **real residential projects** with context and narrative
+* Position NV Studio Design as **competent in both design and permitting**
+* Attract **homeowners and developers/builders**
+* Convert visitors into **consultation requests**
+
+This is **not** a branding experiment or a marketing-heavy site.
+Clarity, structure, and real work matter more than visual effects.
+
+---
+
+## 2. Core Focus of NV Studio Design
+
+### Primary services
+
+* Residential architectural design
+* Custom homes
+* Residential renovations and additions
+
+### Closely integrated services
+
+* Interior design
+* Zoning review & feasibility
+* Building permits and permit drawings
+* Coordination with consultants
+
+Important:
+These are **not separate businesses**.
+They are presented as **one integrated residential design process**.
+
+---
+
+## 3. Geographic Scope
+
+* **Primary:** Greater Toronto Area (GTA)
+* **Secondary:** Ontario
+* Projects are mostly in the GTA and should be referenced naturally (no artificial location pages).
+
+---
+
+## 4. Target Audience
+
+The website is designed for:
+
+* Homeowners (first-time and experienced)
+* Developers / builders
+
+Visitors should quickly understand:
+
+* What NV Studio Design does
+* Whether their project fits
+* What working with the studio looks like
+
+The site must balance:
+
+* Visual inspiration
+* Technical credibility
+* Process clarity
+* Practical guidance
+
+---
+
+## 5. What We Are Building (Site Structure)
+
+### Proposed high-level structure
+
+```
+Home
+Services
+  ├─ Architectural Design (Residential)
+  ├─ Interior Design
+  └─ Planning & Building Permits
+Process
+Portfolio
+  ├─ Projects Index
+  └─ Individual Project Pages
+About
+Contact / Book Consultation
+```
+
+Navigation should remain **simple and minimal**.
+
+---
+
+## 6. Key Areas of Focus
+
+### 1️⃣ Architectural Design page (Core page)
+
+This is the **most important page** on the website.
+
+It should:
+
+* Represent NV Studio Design’s main service
+* Explain residential architectural design in plain language
+* Include zoning, feasibility, and permits as part of the service
+* Be the primary SEO landing page
+* Lead users toward consultation
+
+Everything else supports this page.
+
+---
+
+### 2️⃣ Portfolio & Project Pages
+
+Each project should have:
+
+* Its own dedicated page
+* A short written description
+* City (not full address), year, goals, and challenges
+* Plans, drawings, photos, or renders where available
+
+The portfolio is:
+
+* A core trust signal
+* A long-term SEO asset
+* Central to convincing visitors to make contact
+
+This is **not just an image gallery**.
+
+---
+
+### 3️⃣ Clear, calm structure
+
+The website should:
+
+* Avoid clutter
+* Avoid overly long text blocks
+* Avoid creating too many micro-service pages
+* Use structure and hierarchy to guide users
+
+SEO is achieved through **clarity and structure**, not tricks.
+
+---
+
+## 7. SEO Approach (High Level)
+
+SEO is treated as:
+
+* Clear page intent
+* Strong internal linking
+* Consistent residential focus
+* Real project content
+
+Important:
+Not all SEO-important pages need to be prominent in navigation.
+
+---
+
+## 8. Visual & Content Direction
+
+* Strong emphasis on visuals
+* Every page must still include meaningful text
+* Project pages must combine visuals with explanation
+* Tone: professional, confident, accessible
+
+Avoid:
+
+* Long philosophical statements
+* Marketing buzzwords
+* Visual noise
+
+---
+
+## 9. Primary Goal
+
+The primary goal of the NV Studio Design website is:
+
+> To encourage the right residential clients in the GTA and Ontario to book a consultation by clearly demonstrating design quality, technical competence, and real project experience.
+
+---
+
+## 10. What Success Looks Like
+
+A successful website will:
+
+* Immediately communicate NV Studio Design’s focus
+* Present services clearly and honestly
+* Showcase projects in a structured, informative way
+* Make booking a consultation feel natural and easy
+
+---
+
+If you want, I can:
+
+* Tighten this into a **1-page handoff document**
+* Rewrite it in a **more technical tone for developers**
+* Create a **visual sitemap** for implementation
+
+This version should already give the implementer **very clear direction** on *what we are building and why*.
+
+
 ## Current State
 
 The site structure has been implemented based on `docs/pages.md`. Each page contains placeholder content (TODO boxes) that needs to be replaced with real content.
