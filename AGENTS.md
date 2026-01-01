@@ -353,6 +353,164 @@ To replace placeholder content:
 - Use relative paths for GitHub Pages compatibility
 - No fade-in/out animations (removed `is-preload` class for instant loading)
 
+## Design System & Technical Decisions
+
+### Modern Minimal Redesign (January 2025)
+
+The site was redesigned from a dark theme to a modern minimal light aesthetic inspired by architectural studios like SMPL and Plot Non Plot.
+
+#### Color Palette
+
+**Light Theme:**
+- Background: `#ffffff` (pure white)
+- Background Alt: `#fafafa` (off-white for sections)
+- Text: `#2a2a2a` (warm charcoal)
+- Text Bold: `#1a1a1a` (near-black for emphasis)
+- Text Light: `#7a7a7a` (medium gray for secondary text)
+- Borders: `#e5e5e5` (light gray)
+- Border Background: `#f5f5f5` (very light gray)
+- Highlight: `#2a2a2a` (dark for interactions)
+- Accents: Muted slate/gray tones (#4a5568, #5a6c7d, #6b7280, #556b7c, #4e5d6c, #5c6b79)
+
+**Rationale:** Gallery-like aesthetic that lets architectural photography stand out. Warm charcoal text instead of pure black for softer reading experience.
+
+#### Typography
+
+**Font Family:**
+- Primary: IBM Plex Sans (400, 500, 600 weights)
+- Monospace: IBM Plex Mono
+- Fallbacks: -apple-system, BlinkMacSystemFont, Segoe UI
+
+**Font Import:**
+```scss
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap');
+```
+
+**Rationale:**
+- Avoids generic fonts (Inter, Arial) per frontend aesthetics guidelines
+- Professional, distinctive, excellent UI clarity
+- Good web rendering across platforms
+
+**Typography Scale:**
+- Body: 17pt (responsive: 14pt→12pt→11pt)
+- H1: 2.75em (increased from 2.5em for modern minimal impact)
+- H2: 1.875em (increased from 1.75em)
+- H3: 1.5em (increased from 1.35em)
+- Letter spacing: -0.01em (tighter, modern feel)
+- Letter spacing alt: 0.08em (for uppercase, less extreme than 0.25em)
+
+#### Spacing & Sizing
+
+- Border radius: 2px (sharp minimal, reduced from 4px)
+- Element margin: 3em (more breathing room, increased from 2em)
+- Inner width: 68em (wider content, increased from 65em)
+
+#### Component Design Decisions
+
+**Buttons:**
+- Default: Outlined with 2px solid border, transparent background
+- Primary: Solid dark background with white text
+- Border radius: 0 (fully square for minimal aesthetic)
+- Font weight: 500 (medium instead of bold)
+- Letter spacing: 0.08em (tighter)
+- Hover: Fill background on default, lighten on primary
+
+**Forms:**
+- Background: White with 1px solid border (#e5e5e5)
+- Focus: Border changes to dark (#1a1a1a), no box-shadow
+- Labels: Medium gray (#7a7a7a), medium weight (500)
+- Clean, minimal aesthetic without glows or shadows
+
+**Tiles/Image Overlays:**
+- Uniform dark overlay: `rgba(26, 26, 26, 0.4)` on all tiles
+- Hover: Reduce opacity to 0.2 to reveal more image
+- Removed: 6 rotating colored accent overlays (simplified for consistency)
+
+**Project Cards:**
+- Added: Subtle 1px border (#e5e5e5)
+- Hover: Scale reduced to 1.03 (from 1.05) for subtler interaction
+- Links: Dark color with underline on hover
+
+**Header:**
+- Background: White with subtle shadow `0 1px 3px 0 rgba(0,0,0,0.08)`
+- Logo strong: Dark background (#1a1a1a) with white text
+- Navigation: Dark text, becomes bold on hover
+- Alt header (homepage): Transparent with white text over banner
+- Mobile: Hamburger menu shown on small screens, nav links hidden
+
+**Banner:**
+- Overlay: Uniform `rgba(26, 26, 26, 0.35)` dark overlay
+- Removed: 6 style variants with colored overlays (style1-6)
+- Text: White for contrast against dark overlay
+
+#### Contact Section Simplification
+
+**Before:** Complex 60/40 split layout (94 lines of SCSS)
+**After:** Simple single-column centered layout (21 lines of SCSS)
+
+**Changes:**
+- Removed: Left/right column split with flex layout
+- Removed: Border between columns
+- Removed: Complex responsive breakpoint overrides
+- Added: Simple centered content (max-width: 50em)
+- Result: 77% code reduction, cleaner visual hierarchy
+
+**Contact Form Strategy:**
+- **Full form**: Only on `contact.html` (dedicated contact page)
+- **CTA sections**: Simple "Book a Consultation" button on all other 13 pages
+- **Rationale**: Follows design principles - "Link from every page" not "embed form everywhere"
+  - Reduces clutter
+  - Cleaner pages
+  - Single source of truth for form
+  - Better UX with clear call-to-action
+
+#### Section-Specific Styling
+
+**Contact Section (#contact):**
+- Background: `#fafafa` (off-white for subtle differentiation)
+- Padding: 4em vertical (3em on small screens)
+- Layout: Block (single column), full-width
+
+**Box Component:**
+- Border: 1px solid (#e5e5e5)
+- Background: Very light gray (#f5f5f5)
+- Padding: 2em (increased from 1.5em)
+
+**Section Headers (header.major):**
+- Underline: 1px (reduced from 2px for subtlety)
+- Margin: Increased spacing between heading and underline
+
+### Compilation
+
+**SASS Compiler:** Dart Sass 1.69.5
+- Location: `/tmp/dart-sass/sass`
+- Command: `sass assets/sass/main.scss assets/css/main.css --style=expanded --source-map`
+- Also compiles: `noscript.scss`
+
+**Output:**
+- `assets/css/main.css` (~67KB)
+- `assets/css/main.css.map` (source map)
+- `assets/css/noscript.css`
+
+### Design Philosophy
+
+**Modern Minimal Principles Applied:**
+- Clean whitespace and breathing room
+- Minimal color palette (avoid bright accent colors)
+- Typography-driven hierarchy
+- Uniform design elements (no rotating colors)
+- Subtle interactions (no aggressive animations)
+- Content-first (imagery and text are focal points)
+- Professional yet approachable
+- Gallery-like presentation for architectural work
+
+**Avoided:**
+- Generic AI aesthetics (Inter, Roboto, Arial fonts)
+- Bright colored overlays and gradients
+- Busy layouts with split columns
+- Over-engineered components
+- Repetitive forms on every page
+
 ## License
 
 Template: CCA 3.0 (html5up.net/license)
