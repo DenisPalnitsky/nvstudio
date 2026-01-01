@@ -91,11 +91,9 @@
 
 	};
 
-	// Play initial animations on page load.
+	// Remove preload class immediately on page load.
 		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
+			$body.removeClass('is-preload');
 		});
 
 	// Clear transitioning state on unload/hide.
@@ -164,19 +162,13 @@
 
 							}
 
-						// Otherwise ...
-							else {
+					// Otherwise ...
+						else {
 
-								// Start transitioning.
-									$this.addClass('is-transitioning');
-									$wrapper.addClass('is-transitioning');
+							// Redirect immediately.
+								location.href = href;
 
-								// Redirect.
-									window.setTimeout(function() {
-										location.href = href;
-									}, 500);
-
-							}
+						}
 
 					});
 
