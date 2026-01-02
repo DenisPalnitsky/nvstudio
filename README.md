@@ -1,73 +1,57 @@
-# Forty by HTML5 UP
+# NV Studio Design (Astro)
 
-A responsive site template designed by HTML5 UP and released under the Creative Commons license.
+Static portfolio website for NV Studio Design, built with [Astro](https://astro.build/) and deployed to GitHub Pages.
 
-## About
+## Local development
 
-This is Forty, a sleek and modern HTML5 template featuring:
-- Grid-based layout with smooth transitions
-- Responsive design that works on all devices
-- Clean, professional styling
-- Interactive menu and smooth scrolling effects
-- Contact form and social media integration
+Requirements:
+- Node.js 20+ (CI uses Node 20)
 
-## Live Demo
+Install dependencies:
 
-Once deployed, your site will be available at: `https://[your-username].github.io/[repository-name]`
+```bash
+npm install
+```
+
+Run locally (dev server):
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+## Project structure (high level)
+
+- **Pages**: `src/pages/*.astro` (these render to `dist/*.html`)
+- **Reusable layout/components**: `src/layouts/`, `src/components/`
+- **Static assets** (served as-is): `public/assets/`, `public/images/`
+
+This project is configured to **preserve existing `.html` URLs** (e.g. `about.html`, `services.html`) so current links keep working.
 
 ## Deployment to GitHub Pages
 
-This repository is configured with GitHub Actions to automatically deploy to GitHub Pages whenever you push to the main branch.
+Deployment is handled by GitHub Actions in `.github/workflows/deploy-pages.yml`:
+- Runs on pushes to `main` (and can be triggered manually)
+- Installs deps with `npm ci`
+- Builds the site with `npm run build`
+- Uploads the build output from `dist/` to GitHub Pages
 
-### Setup Instructions
+### Base path on GitHub Pages
 
-1. **Enable GitHub Pages**:
-   - Go to your repository's Settings
-   - Navigate to the "Pages" section
-   - Under "Source", select "GitHub Actions"
-
-2. **Push your changes**:
-   ```bash
-   git add .
-   git commit -m "Add GitHub Pages deployment"
-   git push origin main
-   ```
-
-3. **Monitor deployment**:
-   - Go to the "Actions" tab in your repository
-   - Watch the "Deploy to GitHub Pages" workflow run
-   - Once complete, your site will be live
-
-### Automatic Deployment
-
-The GitHub Actions workflow (`.github/workflows/deploy-pages.yml`) will:
-- Trigger on every push to the main branch
-- Deploy the entire repository to GitHub Pages
-- Provide the live URL in the workflow output
-
-### Manual Deployment
-
-You can also trigger deployment manually:
-- Go to the "Actions" tab
-- Select the "Deploy to GitHub Pages" workflow
-- Click "Run workflow"
-
-## Customization
-
-### Editing Content
-- `index.html` - Main homepage
-- `landing.html` - Landing page template
-- `generic.html` - Generic page template
-- `elements.html` - UI elements showcase
-
-### Styling
-- CSS files are in `assets/css/`
-- SCSS source files are in `assets/sass/`
-- Modify `assets/sass/main.scss` and recompile if needed
-
-### Images
-- Replace images in the `images/` folder
-- Update image references in HTML files
+Astro’s `base` is set automatically during GitHub Actions builds:
+- If the repo is `username.github.io`, the site is served at `/`
+- Otherwise (project pages), the site is served at `/<repo-name>/`
 
 ## Credits
 

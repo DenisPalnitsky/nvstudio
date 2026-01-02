@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Static portfolio website built on the "Forty" HTML5 UP template for a residential architecture studio in the GTA.
+Static portfolio website built with **Astro** on the "Forty" HTML5 UP template for a residential architecture studio in the GTA.
 
 Below is a **more specific, concrete version** of the same high-level document, explicitly framed around **NV Studio Design** and its current positioning.
 It’s still **non-detailed**, but now very clear about *what exactly is being built and why*.
@@ -226,100 +226,136 @@ Home | Services | Process | Portfolio | About | Contact
 
 ### Pages with TODO Placeholders
 These pages have structure but need real content:
-- `index.html` - TODO for Home section
-- `services.html` - TODO for Services section
-- `architectural-design.html` - TODO for Architectural Design section
-- `interior-design.html` - TODO for Interior Design section
-- `building-permits.html` - TODO for Planning & Building Permits section
-- `process.html` - TODO for Process section
-- `portfolio.html` - TODO for Portfolio section
-- `about.html` - TODO for About section
-- `contact.html` - TODO for Contact section
+- `src/pages/index.astro` - TODO for Home section
+- `src/pages/services.astro` - TODO for Services section
+- `src/pages/architectural-design.astro` - TODO for Architectural Design section
+- `src/pages/interior-design.astro` - TODO for Interior Design section
+- `src/pages/building-permits.astro` - TODO for Planning & Building Permits section
+- `src/pages/process.astro` - TODO for Process section
+- `src/pages/portfolio.astro` - TODO for Portfolio section
+- `src/pages/about.astro` - TODO for About section
+- `src/pages/contact.astro` - TODO for Contact section
 
 ### Project Pages (have content)
-- `project-modern-residential-villa.html`
-- `project-contemporary-kitchen-design.html`
-- `project-luxury-home-renovation.html`
-- `project-laneway-house.html`
+- `src/pages/project-modern-residential-villa.astro`
+- `src/pages/project-contemporary-kitchen-design.astro`
+- `src/pages/project-luxury-home-renovation.astro`
+- `src/pages/project-laneway-house.astro`
 
 ## Technical Stack
 
 ### Core Technologies
+- **Astro 5.0** - Static site generator with component-based architecture
 - **HTML5** - Semantic markup with modern elements (`<section>`, `<article>`, `<header>`, `<nav>`)
-- **CSS3/SCSS** - Compiled from SASS source files
+- **CSS3/SCSS** - Compiled from SASS source files (located in `public/assets/sass/`)
 - **JavaScript** - jQuery-based interactions and effects
 
-### CSS Architecture
+### Project Structure
 ```
-assets/
-├── css/
-│   ├── main.css              # Compiled stylesheet
-│   ├── main.css.map          # Source map for debugging
-│   ├── noscript.css          # Fallback for no-JS browsers
-│   └── fontawesome-all.min.css
-└── sass/
-    ├── main.scss             # Main entry point
-    ├── noscript.scss
-    ├── base/                 # Typography, reset styles
-    ├── components/           # Reusable UI components
-    ├── layout/               # Page structure, grid
-    └── libs/
-        ├── _vars.scss        # Variables (colors, fonts, breakpoints)
-        ├── _mixins.scss      # SASS mixins
-        ├── _functions.scss   # SASS functions
-        ├── _breakpoints.scss # Responsive breakpoints
-        ├── _html-grid.scss   # Grid system
-        └── _vendor.scss      # Vendor prefixes
+src/
+├── pages/                    # Astro pages (routes)
+│   ├── index.astro          # Homepage
+│   ├── services.astro
+│   ├── architectural-design.astro
+│   ├── interior-design.astro
+│   ├── building-permits.astro
+│   ├── process.astro
+│   ├── portfolio.astro
+│   ├── about.astro
+│   ├── contact.astro
+│   └── project-*.astro      # Individual project pages
+├── components/              # Reusable Astro components
+│   ├── SiteHeader.astro
+│   ├── SiteMenu.astro
+│   ├── SiteFooter.astro
+│   ├── ContactCta.astro
+│   └── Scripts.astro
+└── layouts/                 # Page layouts
+    └── BaseLayout.astro     # Main layout wrapper
+
+public/
+├── assets/
+│   ├── css/                 # Compiled stylesheets
+│   │   ├── main.css
+│   │   ├── main.css.map
+│   │   ├── noscript.css
+│   │   └── fontawesome-all.min.css
+│   ├── sass/                # SCSS source files
+│   │   ├── main.scss
+│   │   ├── noscript.scss
+│   │   ├── base/            # Typography, reset styles
+│   │   ├── components/      # Reusable UI components
+│   │   ├── layout/          # Page structure, grid
+│   │   └── libs/
+│   │       ├── _vars.scss
+│   │       ├── _mixins.scss
+│   │       ├── _functions.scss
+│   │       ├── _breakpoints.scss
+│   │       ├── _html-grid.scss
+│   │       └── _vendor.scss
+│   ├── js/                  # JavaScript libraries
+│   │   ├── jquery.min.js
+│   │   ├── jquery.scrollex.min.js
+│   │   ├── jquery.scrolly.min.js
+│   │   ├── breakpoints.min.js
+│   │   ├── browser.min.js
+│   │   ├── util.js
+│   │   └── main.js
+│   └── webfonts/            # Font files
+└── images/                  # All imagery
 ```
 
 ### JavaScript Libraries
-- **jQuery** (`jquery.min.js`) - DOM manipulation and events
-- **Scrollex** (`jquery.scrollex.min.js`) - Scroll-based interactions
-- **Scrolly** (`jquery.scrolly.min.js`) - Smooth scrolling
-- **Breakpoints** (`breakpoints.min.js`) - Responsive breakpoint detection
-- **Browser** (`browser.min.js`) - Browser detection utilities
-- **Util** (`util.js`) - Helper utilities
-- **Main** (`main.js`) - Site-specific functionality
+- **jQuery** - DOM manipulation and events
+- **Scrollex** - Scroll-based interactions
+- **Scrolly** - Smooth scrolling
+- **Breakpoints** - Responsive breakpoint detection
+- **Browser** - Browser detection utilities
+- **Util** - Helper utilities
+- **Main** - Site-specific functionality
 
 ### Icons & Fonts
 - **Font Awesome** - Icon library via CSS
-- **Web fonts** - Located in `assets/webfonts/`
+- **Web fonts** - Located in `public/assets/webfonts/`
 
 ### Deployment
 - **GitHub Pages** - Static hosting
-- **GitHub Actions** - CI/CD pipeline (`.github/workflows/deploy-pages.yml`)
+- **GitHub Actions** - CI/CD pipeline using `withastro/action@v5`
 - Auto-deploys on push to `main` branch
+- Builds static HTML files (`.html` format preserved for compatibility)
 
 ## File Structure
 
 ```
 /
-├── index.html                     # Homepage
-├── services.html                  # Services overview
-├── process.html                   # Process page
-├── portfolio.html                 # Portfolio index
-├── about.html                     # About page
-├── contact.html                   # Contact / Book consultation
-├── architectural-design.html      # Architectural Design service
-├── interior-design.html           # Interior Design service
-├── building-permits.html          # Planning & Building Permits service
-├── project-*.html                 # Individual project pages
+├── src/                           # Astro source files
+│   ├── pages/                     # Page routes (generate .html files)
+│   ├── components/                # Reusable components
+│   └── layouts/                   # Page layouts
+├── public/                        # Static assets (copied as-is)
+│   ├── assets/                    # CSS, JS, fonts
+│   │   ├── css/                   # Compiled CSS
+│   │   ├── sass/                  # SCSS source
+│   │   ├── js/                    # JavaScript
+│   │   └── webfonts/              # Font files
+│   └── images/                      # Images
 ├── docs/                          # Documentation
 │   ├── pages.md                   # Content requirements per page
 │   ├── structure.md               # Site structure reference
 │   ├── Redesign.md                # SEO & redesign principles
 │   └── architecture-design.md     # Architectural Design page details
-├── images/                        # All imagery
-├── assets/
-│   ├── css/                       # Compiled CSS
-│   ├── sass/                      # SCSS source
-│   ├── js/                        # JavaScript
-│   └── webfonts/                  # Font files
 ├── .github/workflows/             # CI/CD config
+├── astro.config.mjs               # Astro configuration
+├── package.json                   # Dependencies
 └── LICENSE.txt                    # CCA 3.0 license
 ```
 
 ## Development Guidelines
+
+### Development Workflow
+- **Local development**: `npm run dev` (starts Astro dev server)
+- **Build**: `npm run build` (generates static HTML files in `dist/`)
+- **Preview**: `npm run preview` (preview production build locally)
 
 ### Content Updates
 Each page has a TODO placeholder box (white background, dashed border) containing:
@@ -329,28 +365,38 @@ Each page has a TODO placeholder box (white background, dashed border) containin
 
 To replace placeholder content:
 1. Refer to `docs/pages.md` for detailed requirements
-2. Replace the TODO div with actual content
-3. Follow SEO guidelines from `docs/Redesign.md`
+2. Edit the `.astro` file in `src/pages/`
+3. Replace the TODO div with actual content
+4. Follow SEO guidelines from `docs/Redesign.md`
 
 ### Styling Changes
-1. Edit SCSS files in `assets/sass/`, not compiled CSS
-2. Variables in `assets/sass/libs/_vars.scss`
-3. Recompile SASS after changes
+1. Edit SCSS files in `public/assets/sass/`, not compiled CSS
+2. Variables in `public/assets/sass/libs/_vars.scss`
+3. Recompile SASS manually after changes (SCSS compilation is not automated in Astro build)
+4. Use `sass public/assets/sass/main.scss public/assets/css/main.css --style=expanded --source-map`
 
 ### Adding Pages
-1. Copy structure from existing page (e.g., `about.html`)
-2. Include same header navigation on all pages
-3. Add placeholder TODO box if content is pending
+1. Create new `.astro` file in `src/pages/` (filename becomes route)
+2. Use `BaseLayout` component for consistent structure
+3. Import and use shared components (`SiteHeader`, `SiteFooter`, etc.)
+4. Add placeholder TODO box if content is pending
+
+### Components
+- Reusable components in `src/components/`
+- Use Astro component syntax with frontmatter for props
+- Components are automatically available to pages
 
 ### Images
+- Place images in `public/images/`
+- Reference with `/images/filename.jpg` (Astro handles public folder)
 - Optimize before adding
 - Use descriptive filenames
 - Include alt text for accessibility
 
 ### Performance
+- Astro automatically optimizes and bundles assets
 - Keep JavaScript minimal
 - Optimize and compress images
-- Use relative paths for GitHub Pages compatibility
 - No fade-in/out animations (removed `is-preload` class for instant loading)
 
 ## Design System & Technical Decisions
@@ -456,8 +502,8 @@ The site was redesigned from a dark theme to a modern minimal light aesthetic in
 - Result: 77% code reduction, cleaner visual hierarchy
 
 **Contact Form Strategy:**
-- **Full form**: Only on `contact.html` (dedicated contact page)
-- **CTA sections**: Simple "Book a Consultation" button on all other 13 pages
+- **Full form**: Only on `src/pages/contact.astro` (dedicated contact page)
+- **CTA sections**: Simple "Book a Consultation" button via `ContactCta` component on all other pages
 - **Rationale**: Follows design principles - "Link from every page" not "embed form everywhere"
   - Reduces clutter
   - Cleaner pages
@@ -480,17 +526,24 @@ The site was redesigned from a dark theme to a modern minimal light aesthetic in
 - Underline: 1px (reduced from 2px for subtlety)
 - Margin: Increased spacing between heading and underline
 
-### Compilation
+### SASS Compilation
 
-**SASS Compiler:** Dart Sass 1.69.5
-- Location: `/tmp/dart-sass/sass`
-- Command: `sass assets/sass/main.scss assets/css/main.css --style=expanded --source-map`
-- Also compiles: `noscript.scss`
+**Note:** SCSS compilation is not automated in the Astro build process. CSS files must be compiled manually.
+
+**SASS Compiler:** Dart Sass
+- Source: `public/assets/sass/`
+- Command: `sass public/assets/sass/main.scss public/assets/css/main.css --style=expanded --source-map`
+- Also compile: `sass public/assets/sass/noscript.scss public/assets/css/noscript.css`
 
 **Output:**
-- `assets/css/main.css` (~67KB)
-- `assets/css/main.css.map` (source map)
-- `assets/css/noscript.css`
+- `public/assets/css/main.css` (~67KB)
+- `public/assets/css/main.css.map` (source map)
+- `public/assets/css/noscript.css`
+
+**Astro Build:**
+- Astro builds static HTML files from `src/pages/*.astro`
+- Copies `public/` folder contents to `dist/` as-is
+- Generated files maintain `.html` extension for URL compatibility
 
 ### Design Philosophy
 

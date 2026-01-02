@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Contact - NV Studio Design"
+  description="Contact NV Studio Design - Book a consultation for your residential architecture project in the GTA."
+>
+  <section id="one">
+    <div class="inner">
+      <header class="major">
+        <h1>Contact / Book Consultation</h1>
+      </header>
+
+      <!-- Placeholder Content - TO BE REPLACED -->
+      <div
+        style="background: #fff; color: #333; padding: 2rem; border: 2px dashed #ccc; border-radius: 4px; font-family: monospace; font-size: 14px; line-height: 1.8;"
+      >
+        <p style="color: #e74c3c; font-weight: bold; margin-bottom: 1rem;">
+          📋 TODO for Contact section
+        </p>
+
+        <p><strong>Purpose</strong></p>
+        <ul>
+          <li>Convert interest into action</li>
+        </ul>
+
+        <p><strong>Content recommendations</strong></p>
+        <ul>
+          <li>Simple form</li>
+          <li>Clear CTA</li>
+          <li>What happens after submission</li>
+        </ul>
+
+        <p><strong>Implementation notes</strong></p>
+        <ul>
+          <li>Link from every page</li>
+          <li>No friction (minimal fields)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" slot="afterMain">
+    <div class="inner" style="max-width: 50em; margin: 0 auto;">
+      <!-- Contact Form -->
+      <form method="post" action="#" style="margin-bottom: 3em;">
+        <div class="fields">
+          <div class="field half">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div class="field half">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="6"></textarea>
+          </div>
+        </div>
+        <ul class="actions">
+          <li><input type="submit" value="Send Message" class="primary" /></li>
+          <li><input type="reset" value="Clear" /></li>
+        </ul>
+      </form>
+
+      <!-- Contact Information -->
+      <div
+        style="display: flex; justify-content: center; gap: 3em; flex-wrap: wrap; text-align: center; padding-top: 2em; border-top: 1px solid #e5e5e5;"
+      >
+        <div class="contact-method">
+          <span class="icon solid alt fa-envelope"></span>
+          <h3>Email</h3>
+          <a href="mailto:info@nvstudiodesign.com">info@nvstudiodesign.com</a>
+        </div>
+        <div class="contact-method">
+          <span class="icon solid alt fa-phone"></span>
+          <h3>Phone</h3>
+          <a href="tel:+16477713590">+1 647 771 3590</a>
+        </div>
+        <div class="contact-method">
+          <span class="icon solid alt fa-home"></span>
+          <h3>Location</h3>
+          <span>Greater Toronto Area<br />Ontario</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

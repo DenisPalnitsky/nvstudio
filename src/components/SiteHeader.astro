@@ -1,0 +1,25 @@
+---
+const { className = "" } = Astro.props;
+const headerClass = className?.trim() ? className.trim() : undefined;
+---
+
+<header id="header" class={headerClass}>
+  <a href="/" class="logo">
+    <img
+      src="images/logo.jpg"
+      alt="NV Studio Design"
+      style="height: 2rem; width: auto; vertical-align: middle; margin-right: 0.5rem;"
+    />
+    <strong>NV Studio</strong> <span>Design</span>
+  </a>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/services">Services</a>
+    <a href="/process">Process</a>
+    <a href="/portfolio">Portfolio</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="#menu">Menu</a>
+  </nav>
+</header>
+
