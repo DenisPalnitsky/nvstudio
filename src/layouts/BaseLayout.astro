@@ -1,0 +1,48 @@
+---
+import ContactCta from "../components/ContactCta.astro";
+import Scripts from "../components/Scripts.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteMenu from "../components/SiteMenu.astro";
+
+const {
+  title,
+  description,
+  keywords,
+  headerClass = "",
+  mainClass = "alt"
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{title}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    {description ? <meta name="description" content={description} /> : null}
+    {keywords ? <meta name="keywords" content={keywords} /> : null}
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <slot name="head" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <SiteHeader className={headerClass} />
+
+      {Astro.slots.has("banner") ? <slot name="banner" /> : null}
+
+      <div id="main" class={mainClass}>
+        <slot />
+      </div>
+
+      {Astro.slots.has("afterMain") ? <slot name="afterMain" /> : <ContactCta />}
+
+      <SiteFooter />
+    </div>
+
+    <SiteMenu />
+    <Scripts />
+  </body>
+</html>
+
