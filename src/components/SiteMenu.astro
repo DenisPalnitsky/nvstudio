@@ -1,9 +1,9 @@
 ---
-const baseUrl = import.meta.env.BASE_URL;
+const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 <nav id="menu">
   <ul class="links">
-    <li><a href={`${baseUrl}`}>Home</a></li>
+    <li><a href={baseUrl}>Home</a></li>
     <li><a href={`${baseUrl}services`}>Services</a></li>
     <li><a href={`${baseUrl}process`}>Process</a></li>
     <li><a href={`${baseUrl}portfolio`}>Portfolio</a></li>
