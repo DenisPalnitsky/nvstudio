@@ -4,8 +4,8 @@
 
 Static portfolio website built with **Astro** on the "Forty" HTML5 UP template for a residential architecture studio in the GTA.
 
+
 Below is a **more specific, concrete version** of the same high-level document, explicitly framed around **NV Studio Design** and its current positioning.
-It’s still **non-detailed**, but now very clear about *what exactly is being built and why*.
 
 ---
 
