@@ -14,12 +14,21 @@ function getGithubPagesBase() {
   return `/${name}`;
 }
 
+function getGithubPagesSite() {
+  const owner = process.env.GITHUB_REPOSITORY_OWNER;
+  if (!owner) return undefined;
+
+  // For GitHub Pages, site is always https://<username>.github.io
+  return `https://${owner}.github.io`;
+}
+
 export default defineConfig({
   // Preserve existing ".html" URLs like "about.html"
   build: {
     format: "file"
   },
   trailingSlash: "ignore",
+  site: process.env.GITHUB_ACTIONS === "true" ? getGithubPagesSite() : undefined,
   base: process.env.GITHUB_ACTIONS === "true" ? getGithubPagesBase() : "/"
 });
 
