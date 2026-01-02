@@ -19,7 +19,7 @@ function getGithubPagesSite() {
   if (!owner) return undefined;
 
   // For GitHub Pages, site is always https://<username>.github.io
-  return `https://${owner}.github.io`;
+  return `https://${owner}.github.io/nvstudio`;
 }
 
 export default defineConfig({
