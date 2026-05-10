@@ -1,46 +1,129 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
 <BaseLayout
-  title="Interior Design - NV Studio Design"
-  description="Sleek and stylish modern interior design featuring cutting-edge aesthetics, functional elegance, and innovative spatial solutions."
+  title="Residential Interior Design GTA | NV Studio Design"
+  description="Residential interior design for houses across the GTA and Ontario. Space planning, materials, built-ins, kitchens, and bathrooms &mdash; developed alongside the architecture."
+  keywords="residential interior design Toronto, GTA interior designer, kitchen design Toronto, home interior design Ontario"
 >
   <section id="one">
     <div class="inner">
       <header class="major">
-        <h1>Interior Design</h1>
+        <h1>Residential Interior Design</h1>
       </header>
 
-      <!-- Placeholder Content - TO BE REPLACED -->
-      <div
-        style="background: #fff; color: #333; padding: 2rem; border: 2px dashed #ccc; border-radius: 4px; font-family: monospace; font-size: 14px; line-height: 1.8;"
-      >
-        <p style="color: #e74c3c; font-weight: bold; margin-bottom: 1rem;">
-          📋 TODO for Interior Design section
-        </p>
+      <p>
+        Interiors are half of what a house feels like. We design them
+        alongside the architecture &mdash; or as a standalone project when
+        the shell is already there &mdash; for homes across the Greater
+        Toronto Area and Ontario.
+      </p>
 
-        <p><strong>Purpose</strong></p>
-        <ul>
-          <li>Capture separate interior design demand</li>
-          <li>Support upselling</li>
-        </ul>
+      <h2>What&rsquo;s in scope</h2>
+      <ul>
+        <li>
+          <strong>Space planning and flow.</strong> How the rooms connect,
+          how people move through them, and where the sight-lines land.
+        </li>
+        <li>
+          <strong>Kitchens and bathrooms.</strong> Layout, millwork,
+          appliances, plumbing fixtures, and the services behind them.
+        </li>
+        <li>
+          <strong>Built-ins and millwork.</strong> Cabinetry, wardrobes,
+          wall units, and the detail drawings your fabricator needs.
+        </li>
+        <li>
+          <strong>Materials and finishes.</strong> Floors, tile, stone,
+          paint, hardware &mdash; picked against real samples, not
+          Pinterest.
+        </li>
+        <li>
+          <strong>Lighting.</strong> A layered plan &mdash; ambient, task,
+          and accent &mdash; coordinated with the electrical rough-in.
+        </li>
+        <li>
+          <strong>FF&amp;E guidance.</strong> Furniture and fixtures to the
+          level of detail each client wants, from a shopping list to a
+          complete specification.
+        </li>
+      </ul>
 
-        <p><strong>Content recommendations</strong></p>
-        <ul>
-          <li>Residential interior focus</li>
-          <li>Scope of interior services</li>
-          <li>Relationship to architectural design</li>
-          <li>2–3 interior-focused projects</li>
-        </ul>
+      <h2>Architecture and interiors, developed together</h2>
+      <p>
+        When we&rsquo;re doing both on the same project, the interior is
+        part of the plan from day one. That means the kitchen island fits
+        the structure, the bathroom doesn&rsquo;t hit the roof slope, and
+        lighting circuits follow the joists without chasing them later.
+      </p>
+      <p>
+        It&rsquo;s not glamorous work, but it&rsquo;s the difference between
+        a house that photographs well on day one and a house that still
+        works five years in.
+      </p>
 
-        <p><strong>Implementation notes</strong></p>
-        <ul>
-          <li>Can reuse structure of Architectural Design</li>
-          <li>Keep wording non-generic</li>
-        </ul>
+      <h2>Interior-only projects</h2>
+      <p>
+        Not every client needs new architecture. We also take on
+        interior-only projects: kitchen renovations, principal-suite
+        reworks, and full interior refreshes where the house envelope
+        stays put and the rooms inside get rebuilt.
+      </p>
+
+      <h2>Selected interior work</h2>
+      <div class="row gtr-50 gtr-uniform">
+        <div class="col-4 col-12-medium">
+          <article class="project-card">
+            <a href={`${baseUrl}project-contemporary-kitchen-design`} class="image">
+              <img
+                src="images/projects/contemporary-kitchen-design/4-5-mxB1570PnXh3MKp8.jpg"
+                alt="Contemporary kitchen design with premium finishes by NV Studio Design, GTA"
+              />
+            </a>
+            <header class="major">
+              <h3><a href={`${baseUrl}project-contemporary-kitchen-design`}>Contemporary Kitchen Design</a></h3>
+              <p>Kitchen renovation</p>
+            </header>
+          </article>
+        </div>
+        <div class="col-4 col-12-medium">
+          <article class="project-card">
+            <a href={`${baseUrl}project-luxury-home-renovation`} class="image">
+              <img
+                src="images/projects/luxury-home-renovation/3-A3QOoKVygoIkW0VX.jpg"
+                alt="Interior of a luxury home renovation by NV Studio Design, GTA"
+              />
+            </a>
+            <header class="major">
+              <h3><a href={`${baseUrl}project-luxury-home-renovation`}>Luxury Home Renovation</a></h3>
+              <p>Whole-house interior</p>
+            </header>
+          </article>
+        </div>
+        <div class="col-4 col-12-medium">
+          <article class="project-card">
+            <a href={`${baseUrl}project-modern-residential-villa`} class="image">
+              <img
+                src="images/projects/modern-residential-villa/1-m5KLpxQggBCWDKl6.jpg"
+                alt="Modern residential villa interiors designed by NV Studio Design"
+              />
+            </a>
+            <header class="major">
+              <h3><a href={`${baseUrl}project-modern-residential-villa`}>Modern Residential Villa</a></h3>
+              <p>Integrated architecture and interiors</p>
+            </header>
+          </article>
+        </div>
       </div>
+      <ul class="actions">
+        <li><a href={`${baseUrl}portfolio`} class="button">View full portfolio</a></li>
+      </ul>
+
+      <ul class="actions">
+        <li><a href={`${baseUrl}contact`} class="button primary">Book a Consultation</a></li>
+      </ul>
     </div>
   </section>
 </BaseLayout>
-

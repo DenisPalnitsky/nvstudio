@@ -1,47 +1,101 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
 <BaseLayout
   title="About - NV Studio Design"
-  description="About NV Studio Design - Our story, philosophy, and approach to residential architecture in the GTA."
+  description="About NV Studio Design &mdash; a residential architecture and interior design practice based in the Greater Toronto Area."
 >
   <section id="one">
     <div class="inner">
       <header class="major">
-        <h1>About</h1>
+        <h1>About NV Studio Design</h1>
       </header>
 
-      <!-- Placeholder Content - TO BE REPLACED -->
-      <div
-        style="background: #fff; color: #333; padding: 2rem; border: 2px dashed #ccc; border-radius: 4px; font-family: monospace; font-size: 14px; line-height: 1.8;"
-      >
-        <p style="color: #e74c3c; font-weight: bold; margin-bottom: 1rem;">
-          📋 TODO for About section
-        </p>
+      <p>
+        NV Studio Design is a residential architecture and interior design
+        practice based in the Greater Toronto Area. We work on custom
+        homes, renovations, additions, and secondary suites across the
+        GTA and Ontario.
+      </p>
+      <p>
+        The studio exists for a specific reason: to design houses &mdash;
+        and nothing else. Commercial, institutional, and large-scale
+        developments are handled better by practices that specialise in
+        them. Houses need a different kind of attention: to the family
+        that will live there, to the existing neighbourhood, to a lot
+        that&rsquo;s often constrained, and to the municipal rules that
+        govern all of it.
+      </p>
 
-        <p><strong>Purpose</strong></p>
-        <ul>
-          <li>Build personal trust</li>
-          <li>Communicate philosophy & values</li>
-        </ul>
+      <!--
+        The biography below is intentionally left in {{ placeholder }} form.
+        The studio lead should fill these in via docs/content-questionnaire.md.
+        Do not fabricate credentials, years, or education.
+      -->
+      <h2>Nikolay Vagano &mdash; Principal</h2>
+      <p>
+        {"{{ bio_paragraph — 3 to 5 sentences: where Nikolay is from, how he came to residential architecture, what he cares about in the work. Fill from content questionnaire. }}"}
+      </p>
+      <p>
+        <strong>Credentials:</strong>
+        {"{{ credentials — e.g. OAA licensed architect, BCIN-qualified designer, RAIC member. Leave blank until confirmed. }}"}
+      </p>
+      <p>
+        <strong>Education:</strong>
+        {"{{ education — school, degree, year. Leave blank if not public. }}"}
+      </p>
+      <p>
+        <strong>Years in practice:</strong>
+        {"{{ years_in_practice — e.g. \"since 2015\" or \"over 10 years\". }}"}
+      </p>
 
-        <p><strong>Content recommendations</strong></p>
-        <ul>
-          <li>Studio story</li>
-          <li>Personal background</li>
-          <li>Design philosophy</li>
-          <li>How you work with clients/builders</li>
-        </ul>
+      <h2>How we work</h2>
+      <ul>
+        <li>
+          <strong>One integrated process.</strong> Architectural design,
+          interior design, and permits are a single engagement, not three
+          separate ones. Decisions made in one feed directly into the others.
+        </li>
+        <li>
+          <strong>Residential only.</strong> Everything in the portfolio
+          is a home. That&rsquo;s a choice, not an accident.
+        </li>
+        <li>
+          <strong>A small practice.</strong>
+          {"{{ team_note — solo practice, or names/roles of collaborators. }}"}
+          Clients work directly with the person designing the house, not
+          with a project manager relaying messages.
+        </li>
+        <li>
+          <strong>Clear scope, honest timelines.</strong> We write the
+          scope down, we name the deliverables, and we don&rsquo;t promise
+          dates we can&rsquo;t hit.
+        </li>
+      </ul>
 
-        <p><strong>Implementation notes</strong></p>
-        <ul>
-          <li>Authentic tone</li>
-          <li>Include photo(s)</li>
-          <li>Avoid buzzwords</li>
-        </ul>
-      </div>
+      <h2>Philosophy, briefly</h2>
+      <p>
+        Good residential architecture is usually specific rather than
+        striking. A house is shaped by the people who will live in it,
+        the orientation of the lot, a budget, and a by-law &mdash; and a
+        good design works all of those out quietly without needing to
+        shout about it. That&rsquo;s the standard we hold the work to.
+      </p>
+
+      <h2>Where we work</h2>
+      <p>
+        Based in {"{{ studio_location — public address or \"Greater Toronto Area\" }}"}.
+        Most projects are in Toronto and the surrounding GTA; we take on
+        work elsewhere in Ontario when the site is interesting and the
+        brief is right.
+      </p>
+
+      <ul class="actions">
+        <li><a href={`${baseUrl}portfolio`} class="button">See Our Work</a></li>
+        <li><a href={`${baseUrl}contact`} class="button primary">Book a Consultation</a></li>
+      </ul>
     </div>
   </section>
 </BaseLayout>
-

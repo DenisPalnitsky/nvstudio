@@ -1,47 +1,102 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
 <BaseLayout
-  title="Building Permits - NV Studio Design"
-  description="Accurate building permit drawings ensuring zoning compliance and precision for seamless project approval. New houses, additions, renovations, and more."
+  title="Planning &amp; Building Permits - NV Studio Design"
+  description="Zoning review, feasibility studies, and residential permit drawings for GTA and Ontario municipalities. Additions, new homes, secondary suites, and laneway houses."
+  keywords="building permit drawings Toronto, zoning review GTA, residential permits Ontario, laneway house permits Toronto, committee of adjustment Toronto"
 >
   <section id="one">
     <div class="inner">
       <header class="major">
-        <h1>Planning & Building Permits</h1>
+        <h1>Planning &amp; Building Permits</h1>
       </header>
 
-      <!-- Placeholder Content - TO BE REPLACED -->
-      <div
-        style="background: #fff; color: #333; padding: 2rem; border: 2px dashed #ccc; border-radius: 4px; font-family: monospace; font-size: 14px; line-height: 1.8;"
-      >
-        <p style="color: #e74c3c; font-weight: bold; margin-bottom: 1rem;">
-          📋 TODO for Planning & Building Permits section
-        </p>
+      <p>
+        Permits are where a good idea meets a municipal reviewer. This page
+        is for homeowners and builders who want to understand what that
+        actually involves in the GTA before they start.
+      </p>
 
-        <p><strong>Purpose</strong></p>
-        <ul>
-          <li>Educate first-time clients</li>
-          <li>Capture small / technical projects</li>
-        </ul>
+      <p>
+        A short version: permits are <strong>part of the design work</strong>,
+        not a separate product. Every project we take on is designed with
+        the Zoning By-law, the Ontario Building Code, and the reviewing
+        municipality in mind from the first sketch. When we talk about
+        &ldquo;permit drawings,&rdquo; we mean the specific set of drawings
+        the city needs to issue the permit &mdash; prepared from the same
+        design, not redrawn.
+      </p>
 
-        <p><strong>Content recommendations</strong></p>
-        <ul>
-          <li>Explain zoning & feasibility</li>
-          <li>Permit drawings & city coordination</li>
-          <li>When this service is relevant</li>
-          <li>Clarify it's part of architectural design</li>
-        </ul>
+      <h2>Zoning &amp; feasibility</h2>
+      <p>
+        Before anyone draws the house, we check what the lot allows. The
+        Zoning By-law governs things like setbacks, building height, lot
+        coverage, floor space index (FSI), and how much of the lot can be
+        hard-surfaced. Overlays &mdash; heritage districts, ravine
+        protection, tree protection, and similar &mdash; add more rules on
+        top.
+      </p>
+      <p>
+        A feasibility review answers the practical question: &ldquo;Can the
+        project you have in mind actually be built on this lot?&rdquo; If
+        the answer is &ldquo;not as-is,&rdquo; we identify what would need
+        to change &mdash; a smaller footprint, a minor variance, or a
+        different programme altogether.
+      </p>
 
-        <p><strong>Implementation notes</strong></p>
-        <ul>
-          <li>Lower SEO priority</li>
-          <li>Important for trust & clarity</li>
-          <li>Avoid overly technical language</li>
-        </ul>
-      </div>
+      <h2>Minor variances &amp; Committee of Adjustment</h2>
+      <p>
+        Sometimes the by-law forbids something small but essential &mdash; a
+        dormer a little too close to a side yard, a back addition a few
+        feet past the setback. In those cases we prepare the package for
+        Committee of Adjustment, attend the hearing, and work with
+        neighbours and planning staff to land the approval.
+      </p>
+
+      <h2>Permit drawings</h2>
+      <p>
+        A residential permit set typically includes site plan, floor plans,
+        elevations, sections, structural and mechanical coordination
+        drawings, and the schedules and notes each municipality expects.
+        We draw to what the reviewing office actually asks for &mdash; the
+        requirements differ between Toronto, Mississauga, Vaughan,
+        Oakville, and the smaller Ontario municipalities &mdash; and we
+        respond to the examiner&rsquo;s comments until the permit issues.
+      </p>
+
+      <h2>When this service is relevant</h2>
+      <ul>
+        <li>You&rsquo;re planning a new custom home and need a complete permit submission.</li>
+        <li>You&rsquo;re adding a second storey, rear addition, or dormer to an existing house.</li>
+        <li>You&rsquo;re adding a secondary suite, basement apartment, or laneway house.</li>
+        <li>You&rsquo;re renovating and the scope touches structure, egress, plumbing, or the building envelope.</li>
+        <li>You&rsquo;ve been asked by your city for a minor variance and don&rsquo;t know where to start.</li>
+      </ul>
+
+      <h2>When it isn&rsquo;t</h2>
+      <p>
+        Purely cosmetic interior work &mdash; paint, finishes, non-load-bearing
+        updates &mdash; usually doesn&rsquo;t need a permit. If you&rsquo;re
+        not sure whether your project does, ask us or your municipality
+        before committing to a schedule.
+      </p>
+
+      <h2>How it fits with the rest of the work</h2>
+      <p>
+        If you&rsquo;re already engaging us for
+        <a href={`${baseUrl}architectural-design`}>architectural design</a>,
+        zoning and permits are folded into that process &mdash; they
+        don&rsquo;t need to be commissioned separately. If you just need
+        drawings for an existing design or a technical project, we take
+        that on too.
+      </p>
+
+      <ul class="actions">
+        <li><a href={`${baseUrl}contact`} class="button primary">Book a Consultation</a></li>
+      </ul>
     </div>
   </section>
 </BaseLayout>
-

@@ -5,7 +5,7 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
 
 <BaseLayout
   title="Portfolio - NV Studio Design"
-  description="NV Studio Design portfolio - Explore our residential architecture projects in the GTA and Ontario."
+  description="Selected residential architecture and interior design projects by NV Studio Design across the Greater Toronto Area and Ontario."
 >
   <section id="one">
     <div class="inner">
@@ -13,52 +13,26 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
         <h1>Portfolio</h1>
       </header>
 
-      <!-- Placeholder Content - TO BE REPLACED -->
-      <div
-        style="background: #fff; color: #333; padding: 2rem; border: 2px dashed #ccc; border-radius: 4px; font-family: monospace; font-size: 14px; line-height: 1.8;"
-      >
-        <p style="color: #e74c3c; font-weight: bold; margin-bottom: 1rem;">
-          📋 TODO for Portfolio section
-        </p>
+      <p>
+        A selection of residential projects &mdash; custom homes,
+        renovations, interiors, and secondary suites &mdash; across the
+        Greater Toronto Area and Ontario. Each project page has a short
+        write-up alongside the images: goals, constraints, and the design
+        decisions that shaped the result.
+      </p>
 
-        <p><strong>Purpose</strong></p>
-        <ul>
-          <li>Showcase work</li>
-          <li>Funnel users to project pages</li>
-        </ul>
-
-        <p><strong>Content recommendations</strong></p>
-        <ul>
-          <li>Grid of projects</li>
-          <li>
-            Filters:
-            <ul>
-              <li>Year</li>
-              <li>Project type (optional)</li>
-            </ul>
-          </li>
-        </ul>
-
-        <p><strong>Implementation notes</strong></p>
-        <ul>
-          <li>Each project must link to its own page</li>
-          <li>Avoid infinite scroll without pagination</li>
-        </ul>
-      </div>
-
-      <!-- Project Grid (functional links) -->
-      <h2 style="margin-top: 2rem;">Projects</h2>
       <div class="row gtr-50 gtr-uniform">
         <div class="col-6 col-12-medium">
           <article class="project-card">
             <a href={`${baseUrl}project-modern-residential-villa`} class="image">
               <img
                 src="images/projects/modern-residential-villa/1-m5KLpxQggBCWDKl6.jpg"
-                alt="Modern Residential Villa"
+                alt="Modern residential villa, custom home by NV Studio Design, Greater Toronto Area"
               />
             </a>
             <header class="major">
               <h3><a href={`${baseUrl}project-modern-residential-villa`}>Modern Residential Villa</a></h3>
+              <p>Custom home &middot; Greater Toronto Area</p>
             </header>
           </article>
         </div>
@@ -67,11 +41,12 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
             <a href={`${baseUrl}project-contemporary-kitchen-design`} class="image">
               <img
                 src="images/projects/contemporary-kitchen-design/4-5-mxB1570PnXh3MKp8.jpg"
-                alt="Contemporary Kitchen Design"
+                alt="Contemporary kitchen design with premium finishes by NV Studio Design, GTA"
               />
             </a>
             <header class="major">
               <h3><a href={`${baseUrl}project-contemporary-kitchen-design`}>Contemporary Kitchen Design</a></h3>
+              <p>Kitchen renovation &middot; GTA</p>
             </header>
           </article>
         </div>
@@ -80,11 +55,12 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
             <a href={`${baseUrl}project-luxury-home-renovation`} class="image">
               <img
                 src="images/projects/luxury-home-renovation/3-A3QOoKVygoIkW0VX.jpg"
-                alt="Luxury Home Renovation"
+                alt="Whole-house renovation of a 1980s residence by NV Studio Design, GTA"
               />
             </a>
             <header class="major">
               <h3><a href={`${baseUrl}project-luxury-home-renovation`}>Luxury Home Renovation</a></h3>
+              <p>Whole-house renovation &middot; GTA</p>
             </header>
           </article>
         </div>
@@ -93,11 +69,12 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
             <a href={`${baseUrl}project-laneway-house`} class="image">
               <img
                 src="images/projects/laneway-house-project/1a-YD0ng4naVrtpzOMo.jpg"
-                alt="Laneway House Project"
+                alt="Compact 850 square foot laneway house by NV Studio Design, Toronto"
               />
             </a>
             <header class="major">
-              <h3><a href={`${baseUrl}project-laneway-house`}>Laneway House Project</a></h3>
+              <h3><a href={`${baseUrl}project-laneway-house`}>Laneway House</a></h3>
+              <p>Secondary dwelling &middot; Toronto</p>
             </header>
           </article>
         </div>
@@ -105,4 +82,3 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
     </div>
   </section>
 </BaseLayout>
-

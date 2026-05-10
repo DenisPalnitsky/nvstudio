@@ -1,10 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
 <BaseLayout
   title="Process - NV Studio Design"
-  description="NV Studio Design process - Learn how we work with clients on residential architecture projects in the GTA."
+  description="How NV Studio Design takes a residential project from first consultation to finished house. Five phases, clear deliverables, and honest decision points."
 >
   <section id="one">
     <div class="inner">
@@ -12,35 +13,106 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <h1>Process</h1>
       </header>
 
-      <!-- Placeholder Content - TO BE REPLACED -->
-      <div
-        style="background: #fff; color: #333; padding: 2rem; border: 2px dashed #ccc; border-radius: 4px; font-family: monospace; font-size: 14px; line-height: 1.8;"
-      >
-        <p style="color: #e74c3c; font-weight: bold; margin-bottom: 1rem;">
-          📋 TODO for Process section
-        </p>
+      <p>
+        A residential project has more moving parts than most clients
+        expect at the start. This page lays out how we structure the work
+        so there are always clear deliverables, a clear decision point,
+        and no surprises in the middle.
+      </p>
 
-        <p><strong>Purpose</strong></p>
-        <ul>
-          <li>Reduce friction</li>
-          <li>Build confidence</li>
-        </ul>
+      <p>
+        Most projects move through five phases. Smaller projects (an
+        interior-only renovation, a permit-only engagement) collapse
+        these; larger ones take longer in each.
+      </p>
 
-        <p><strong>Content recommendations</strong></p>
-        <ul>
-          <li>Clear step-by-step process</li>
-          <li>What client provides at each stage</li>
-          <li>Where decisions happen</li>
-        </ul>
+      <h2>1. Initial consultation &amp; site review</h2>
+      <p>
+        We start with a conversation &mdash; usually a short call, then a
+        visit to the site. The goal is to understand the brief, walk the
+        lot or the existing house, and identify the constraints that will
+        shape the project: zoning, existing structure, orientation,
+        neighbours, budget.
+      </p>
+      <ul>
+        <li><strong>You provide:</strong> a rough brief, any survey or deed you have, photos of the existing house if it&rsquo;s a renovation.</li>
+        <li><strong>You receive:</strong> an honest read of whether the project is feasible, a proposed scope of work, and a fixed-fee proposal for the next phase.</li>
+        <li><strong>Decision point:</strong> whether to engage for concept &amp; feasibility.</li>
+      </ul>
 
-        <p><strong>Implementation notes</strong></p>
-        <ul>
-          <li>Diagrams work well</li>
-          <li>Link from service pages</li>
-          <li>Not SEO-critical</li>
-        </ul>
-      </div>
+      <h2>2. Concept &amp; feasibility</h2>
+      <p>
+        We develop a small number of design options &mdash; usually two or
+        three &mdash; and test each against the Zoning By-law and the
+        site. The output isn&rsquo;t a pretty render; it&rsquo;s a
+        buildable scheme with a clear idea of where any variances or
+        trade-offs will be.
+      </p>
+      <ul>
+        <li><strong>You provide:</strong> feedback on priorities, a rough budget range, and a decision on the chosen direction.</li>
+        <li><strong>You receive:</strong> concept plans, basic massing, a zoning summary, and a recommendation on whether the project can proceed as-of-right or will need a minor variance.</li>
+        <li><strong>Decision point:</strong> lock the scheme, or loop back with revised priorities.</li>
+      </ul>
+
+      <h2>3. Design development</h2>
+      <p>
+        The chosen scheme is worked through in detail: floor plans,
+        sections, elevations, materials, structural ideas, interior
+        decisions. We resolve how cabinetry meets the structure, how
+        lighting coordinates with the ceiling, and how the envelope
+        details will actually be built.
+      </p>
+      <p>
+        This is where architecture and interiors come together. If
+        we&rsquo;re doing both, interior decisions happen now &mdash; not
+        later &mdash; so they can inform the rough-in.
+      </p>
+      <ul>
+        <li><strong>You provide:</strong> decisions on material direction, fixture and finish preferences, input on interior layouts.</li>
+        <li><strong>You receive:</strong> a coordinated design development package &mdash; the house as it will actually be built.</li>
+        <li><strong>Decision point:</strong> approval to proceed to permit drawings.</li>
+      </ul>
+
+      <h2>4. Permit drawings &amp; approvals</h2>
+      <p>
+        We produce the drawings the reviewing municipality needs to issue
+        the permit and coordinate with structural, mechanical, and other
+        consultants as required. If a minor variance is needed, we prepare
+        the Committee of Adjustment package and attend the hearing.
+      </p>
+      <ul>
+        <li><strong>You provide:</strong> authorisation as the owner, any existing documents (survey, arborist report, etc.), and timely responses to consultant questions.</li>
+        <li><strong>You receive:</strong> a complete permit submission, and ongoing management of the reviewer&rsquo;s comments until the permit issues.</li>
+        <li><strong>Decision point:</strong> selection of a builder (if not already chosen) in parallel with permit review.</li>
+      </ul>
+
+      <h2>5. Construction coordination</h2>
+      <p>
+        Drawings never answer every question on a construction site. We
+        stay engaged through construction &mdash; answering the builder&rsquo;s
+        questions, reviewing shop drawings, visiting the site at key
+        milestones, and protecting the design decisions that were made on
+        paper.
+      </p>
+      <ul>
+        <li><strong>You provide:</strong> access to the site for reviews, decisions on any change orders the builder proposes.</li>
+        <li><strong>You receive:</strong> clarifications, issued-for-construction updates, and design-intent reviews at key phases (framing, rough-in, finishes).</li>
+        <li><strong>Decision point:</strong> sign-off at substantial completion.</li>
+      </ul>
+
+      <h2>Timelines</h2>
+      <p>
+        An honest range: a permit-only project can close in a few months;
+        a new custom home from first consultation to issued permit is
+        usually closer to a year; complex sites and Committee of
+        Adjustment hearings extend that. We give a project-specific
+        timeline after the initial consultation.
+      </p>
+
+      <ul class="actions">
+        <li><a href={`${baseUrl}contact`} class="button primary">Book a Consultation</a></li>
+        <li><a href={`${baseUrl}architectural-design`} class="button">Architectural Design</a></li>
+      </ul>
     </div>
   </section>
 </BaseLayout>
-

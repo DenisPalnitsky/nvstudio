@@ -4,9 +4,9 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
 ---
 
 <BaseLayout
-  title="Laneway House Project - NV Studio Design"
-  description="Laneway House Project - A modern 850 sq ft laneway house designed for urban living by NV Studio Design."
-  keywords="laneway house, secondary dwelling unit, urban design, small space design, NV Studio Design"
+  title="Laneway House - NV Studio Design"
+  description="An 850 sq ft laneway house by NV Studio Design. A compact Toronto laneway suite designed for real living &mdash; tight zoning, generous light, careful plan."
+  keywords="laneway house Toronto, laneway suite Toronto, secondary dwelling unit Ontario, small space architecture, NV Studio Design"
   headerClass="alt style2"
   mainClass={undefined}
 >
@@ -15,16 +15,16 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
       <span class="image">
         <img
           src="images/projects/laneway-house-project/1a-YD0ng4naVrtpzOMo.jpg"
-          alt="Laneway House Project"
+          alt="Compact 850 square foot laneway house by NV Studio Design, Toronto"
         />
       </span>
       <header class="major">
-        <h1>Laneway House Project</h1>
+        <h1>Laneway House</h1>
       </header>
       <div class="content">
         <p>
-          A modern 850 sq ft laneway house designed for urban living,<br />
-          maximizing space efficiency while maintaining style and comfort.
+          An 850 sq ft laneway house in Toronto &mdash;<br />
+          compact on the lot, generous on light, tuned to the by-law.
         </p>
       </div>
     </div>
@@ -32,33 +32,62 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
 
   <section id="one">
     <div class="inner">
-      <header class="major">
-        <!-- Content from docs/pages.md Section 8: Individual Project Pages (lines 183-204) -->
-        <h2>Individual Project Page Template</h2>
-      </header>
+      <div class="row gtr-50">
+        <div class="col-8 col-12-medium">
+          <h2>Design intent</h2>
+          <p>
+            Laneway suites are among the most constrained residential
+            projects Toronto allows: a specific by-law, strict angular
+            plane rules, and a footprint measured in feet. That&rsquo;s
+            also what makes them interesting &mdash; every decision
+            counts, and nothing can be fudged.
+          </p>
+          <p>
+            The plan puts living and kitchen on the main level with a
+            double-height moment where it matters, and a private sleeping
+            zone above. Windows were placed for light and privacy, not
+            for composition &mdash; laneway neighbours are close, and
+            openings that work in a single-family suburb don&rsquo;t work
+            here. The result is a small house that still feels like a
+            house.
+          </p>
 
-      <h3>Purpose</h3>
-      <ul>
-        <li>Strongest SEO + trust asset</li>
-        <li>Prove real experience</li>
-      </ul>
+          <h2>Key ideas</h2>
+          <ul>
+            <li>Every square foot earns its place; nothing is leftover space.</li>
+            <li>Designed against Toronto&rsquo;s laneway by-law from the first sketch.</li>
+            <li>Storage built into the architecture, not appliqued on after.</li>
+            <li>Glazing tuned for privacy from laneway and main house alike.</li>
+          </ul>
+        </div>
 
-      <h3>Content recommendations</h3>
-      <ul>
-        <li>Project title + year</li>
-        <li>City (not exact address)</li>
-        <li>Client goals</li>
-        <li>Design challenges</li>
-        <li>Plans / drawings / renders</li>
-        <li>Short narrative</li>
-      </ul>
+        <div class="col-4 col-12-medium">
+          <h3>Project facts</h3>
+          <ul>
+            <li><strong>Type:</strong> Laneway suite (secondary dwelling)</li>
+            <li><strong>Location:</strong> Toronto {"{{ confirm_city }}"}</li>
+            <li><strong>Year:</strong> {"{{ year }}"}</li>
+            <li><strong>Size:</strong> 850 sq ft {"{{ confirm_size }}"}</li>
+            <li><strong>Status:</strong> {"{{ status }}"}</li>
+            <li><strong>Services:</strong> Architectural design, permits, zoning</li>
+          </ul>
 
-      <h3>Implementation notes</h3>
-      <ul>
-        <li>One URL per project</li>
-        <li>Text is mandatory (not image-only)</li>
-        <li>Use consistent structure for all projects</li>
-      </ul>
+          <h3>Client brief</h3>
+          <p>
+            {"{{ client_goal — 1 to 2 sentences. Fill from content questionnaire. }}"}
+          </p>
+
+          <h3>Design challenge</h3>
+          <p>
+            {"{{ design_challenge — 1 to 2 sentences. Fill from content questionnaire. }}"}
+          </p>
+        </div>
+      </div>
+
+      <!--
+        Additional images available in /public/images/projects/laneway-house-project/
+        Known files: 1a-YD0ng4naVrtpzOMo.jpg, img-dWxq59JboXf78PDJ.jpg
+      -->
 
       <ul class="actions">
         <li><a href={`${baseUrl}portfolio`} class="button primary">Back to Portfolio</a></li>
@@ -67,4 +96,3 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
     </div>
   </section>
 </BaseLayout>
-

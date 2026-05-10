@@ -5,8 +5,8 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
 
 <BaseLayout
   title="Modern Residential Villa - NV Studio Design"
-  description="Modern Residential Villa - A stunning contemporary home featuring clean lines, floor-to-ceiling windows, and sustainable design elements by NV Studio Design."
-  keywords="modern residential villa, contemporary home design, architectural design, NV Studio Design"
+  description="A contemporary custom home in the Greater Toronto Area by NV Studio Design. Clean lines, generous glazing, and a plan shaped by site and orientation."
+  keywords="modern residential villa Toronto, custom home GTA, contemporary architecture Ontario, NV Studio Design"
   headerClass="alt style2"
   mainClass={undefined}
 >
@@ -15,7 +15,7 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
       <span class="image">
         <img
           src="images/projects/modern-residential-villa/1-m5KLpxQggBCWDKl6.jpg"
-          alt="Modern Residential Villa"
+          alt="Modern residential villa, a contemporary custom home by NV Studio Design"
         />
       </span>
       <header class="major">
@@ -23,8 +23,8 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
       </header>
       <div class="content">
         <p>
-          A stunning contemporary home featuring clean lines,<br />
-          floor-to-ceiling windows, and sustainable design elements.
+          A contemporary custom home designed around clean lines,<br />
+          generous glazing, and the way the family actually lives.
         </p>
       </div>
     </div>
@@ -32,33 +32,63 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
 
   <section id="one">
     <div class="inner">
-      <header class="major">
-        <!-- Content from docs/pages.md Section 8: Individual Project Pages (lines 183-204) -->
-        <h2>Individual Project Page Template</h2>
-      </header>
+      <div class="row gtr-50">
+        <div class="col-8 col-12-medium">
+          <h2>Design intent</h2>
+          <p>
+            The house is organised around a clear, legible plan: a quiet
+            front face, an open living volume behind it, and a private zone
+            above. Floor-to-ceiling glazing opens the main floor to the
+            garden and brings daylight deep into the plan; solid wall
+            elements hold the composition together and keep the street
+            elevation calm.
+          </p>
+          <p>
+            Materials were chosen to age well on a GTA site: warm-toned
+            cladding, dark-framed fenestration, and restrained
+            detailing. The interior continues the same vocabulary &mdash;
+            architectural millwork, integrated lighting, and a small
+            palette of surfaces carried through from entry to principal
+            suite.
+          </p>
 
-      <h3>Purpose</h3>
-      <ul>
-        <li>Strongest SEO + trust asset</li>
-        <li>Prove real experience</li>
-      </ul>
+          <h2>Key ideas</h2>
+          <ul>
+            <li>A compact, rational plan that reads at a glance.</li>
+            <li>Glazing placed for light and view, not for symmetry.</li>
+            <li>Interior and architecture designed as one project, so cabinetry and lighting resolve cleanly into the structure.</li>
+            <li>Massing and setbacks worked out against the lot&rsquo;s zoning early, not revised under permit pressure.</li>
+          </ul>
+        </div>
 
-      <h3>Content recommendations</h3>
-      <ul>
-        <li>Project title + year</li>
-        <li>City (not exact address)</li>
-        <li>Client goals</li>
-        <li>Design challenges</li>
-        <li>Plans / drawings / renders</li>
-        <li>Short narrative</li>
-      </ul>
+        <div class="col-4 col-12-medium">
+          <h3>Project facts</h3>
+          <ul>
+            <li><strong>Type:</strong> Custom home</li>
+            <li><strong>Location:</strong> {"{{ city — e.g. Toronto, Mississauga, Oakville }}"}</li>
+            <li><strong>Year:</strong> {"{{ year }}"}</li>
+            <li><strong>Size:</strong> {"{{ size_sqft }}"}</li>
+            <li><strong>Status:</strong> {"{{ status — completed / under construction / permitted }}"}</li>
+            <li><strong>Services:</strong> Architectural design, interior design, permits</li>
+          </ul>
 
-      <h3>Implementation notes</h3>
-      <ul>
-        <li>One URL per project</li>
-        <li>Text is mandatory (not image-only)</li>
-        <li>Use consistent structure for all projects</li>
-      </ul>
+          <h3>Client brief</h3>
+          <p>
+            {"{{ client_goal — 1 to 2 sentences. Fill from content questionnaire. }}"}
+          </p>
+
+          <h3>Design challenge</h3>
+          <p>
+            {"{{ design_challenge — 1 to 2 sentences. Fill from content questionnaire. }}"}
+          </p>
+        </div>
+      </div>
+
+      <!--
+        Additional project images can be added here. Files live at:
+        /public/images/projects/modern-residential-villa/
+        Known files: 1-m5KLpxQggBCWDKl6.jpg, img-A0xxQVDK1eT4vp13.jpg, QIP-Shot-Screen-mePjwaZBlNi3jZze.jpg
+      -->
 
       <ul class="actions">
         <li><a href={`${baseUrl}portfolio`} class="button primary">Back to Portfolio</a></li>
@@ -67,4 +97,3 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
     </div>
   </section>
 </BaseLayout>
-

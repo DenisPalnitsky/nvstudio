@@ -5,8 +5,8 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
 
 <BaseLayout
   title="Contemporary Kitchen Design - NV Studio Design"
-  description="Contemporary Kitchen Design - A sleek modern kitchen renovation featuring premium finishes and smart storage solutions by NV Studio Design."
-  keywords="contemporary kitchen design, modern kitchen renovation, interior design, NV Studio Design"
+  description="A contemporary kitchen renovation by NV Studio Design. Integrated millwork, premium finishes, and a layout built around how the family cooks and hosts."
+  keywords="contemporary kitchen design Toronto, kitchen renovation GTA, modern kitchen Ontario, NV Studio Design"
   headerClass="alt style2"
   mainClass={undefined}
 >
@@ -15,7 +15,7 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
       <span class="image">
         <img
           src="images/projects/contemporary-kitchen-design/4-5-mxB1570PnXh3MKp8.jpg"
-          alt="Contemporary Kitchen Design"
+          alt="Contemporary kitchen with integrated millwork and stone surfaces, by NV Studio Design"
         />
       </span>
       <header class="major">
@@ -23,8 +23,8 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
       </header>
       <div class="content">
         <p>
-          A sleek modern kitchen renovation featuring premium finishes,<br />
-          smart storage solutions, and open-concept design.
+          A kitchen reworked around how the family actually cooks,<br />
+          with premium finishes and integrated millwork resolved into the plan.
         </p>
       </div>
     </div>
@@ -32,33 +32,60 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
 
   <section id="one">
     <div class="inner">
-      <header class="major">
-        <!-- Content from docs/pages.md Section 8: Individual Project Pages (lines 183-204) -->
-        <h2>Individual Project Page Template</h2>
-      </header>
+      <div class="row gtr-50">
+        <div class="col-8 col-12-medium">
+          <h2>Design intent</h2>
+          <p>
+            A kitchen is a structural room pretending to be casual. It
+            has to work as an appliance, a gathering space, and a piece of
+            architecture at the same time &mdash; and on a renovation
+            that work has to fit inside what&rsquo;s already there.
+          </p>
+          <p>
+            The plan is built around a generous island that doubles as
+            prep surface and informal seating. Tall integrated cabinetry
+            handles pantry and appliance garages, keeping the counter
+            runs deliberately clean. Stone surfaces and warm-toned
+            millwork trade off against each other so the room reads
+            calm, not cold.
+          </p>
 
-      <h3>Purpose</h3>
-      <ul>
-        <li>Strongest SEO + trust asset</li>
-        <li>Prove real experience</li>
-      </ul>
+          <h2>Key ideas</h2>
+          <ul>
+            <li>Layout driven by the work triangle, then by sightlines to the rest of the house.</li>
+            <li>Integrated appliances so the cabinetry reads as millwork, not as a product lineup.</li>
+            <li>Lighting layered across three levels: ambient, task, and accent.</li>
+            <li>Finishes specified against real samples, not renders.</li>
+          </ul>
+        </div>
 
-      <h3>Content recommendations</h3>
-      <ul>
-        <li>Project title + year</li>
-        <li>City (not exact address)</li>
-        <li>Client goals</li>
-        <li>Design challenges</li>
-        <li>Plans / drawings / renders</li>
-        <li>Short narrative</li>
-      </ul>
+        <div class="col-4 col-12-medium">
+          <h3>Project facts</h3>
+          <ul>
+            <li><strong>Type:</strong> Kitchen renovation</li>
+            <li><strong>Location:</strong> {"{{ city }}"}</li>
+            <li><strong>Year:</strong> {"{{ year }}"}</li>
+            <li><strong>Size:</strong> {"{{ size_sqft }}"}</li>
+            <li><strong>Status:</strong> {"{{ status }}"}</li>
+            <li><strong>Services:</strong> Interior design, millwork design</li>
+          </ul>
 
-      <h3>Implementation notes</h3>
-      <ul>
-        <li>One URL per project</li>
-        <li>Text is mandatory (not image-only)</li>
-        <li>Use consistent structure for all projects</li>
-      </ul>
+          <h3>Client brief</h3>
+          <p>
+            {"{{ client_goal — 1 to 2 sentences. Fill from content questionnaire. }}"}
+          </p>
+
+          <h3>Design challenge</h3>
+          <p>
+            {"{{ design_challenge — 1 to 2 sentences. Fill from content questionnaire. }}"}
+          </p>
+        </div>
+      </div>
+
+      <!--
+        Additional images available in /public/images/projects/contemporary-kitchen-design/
+        Known files: 3_f-mxBr6VXEeBcDpQKR.jpg, 4-5-mxB1570PnXh3MKp8.jpg, fin_kit_7b-A3QpLkleKLt9rJoW.jpg
+      -->
 
       <ul class="actions">
         <li><a href={`${baseUrl}portfolio`} class="button primary">Back to Portfolio</a></li>
@@ -67,4 +94,3 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_UR
     </div>
   </section>
 </BaseLayout>
-

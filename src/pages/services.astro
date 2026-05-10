@@ -1,10 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
 <BaseLayout
   title="Services - NV Studio Design"
-  description="NV Studio Design services - Architectural Design, Interior Design, and Planning & Permits for residential projects in the GTA."
+  description="Architectural Design, Interior Design, and Planning & Permits for residential projects across the GTA and Ontario. Three integrated services, one practice."
 >
   <section id="one">
     <div class="inner">
@@ -12,41 +13,71 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <h1>Services</h1>
       </header>
 
-      <!-- Placeholder Content - TO BE REPLACED -->
-      <div
-        style="background: #fff; color: #333; padding: 2rem; border: 2px dashed #ccc; border-radius: 4px; font-family: monospace; font-size: 14px; line-height: 1.8;"
-      >
-        <p style="color: #e74c3c; font-weight: bold; margin-bottom: 1rem;">
-          📋 TODO for Services section
-        </p>
+      <p>
+        Three services, one practice. Every residential project we take on
+        moves through some combination of the three, coordinated end to end
+        so nothing gets lost in the handoff between design and permit, or
+        architecture and interiors.
+      </p>
 
-        <p><strong>Purpose</strong></p>
-        <ul>
-          <li>Orient users</li>
-          <li>Route them to core services</li>
-        </ul>
-
-        <p><strong>Content recommendations</strong></p>
-        <ul>
-          <li>Short intro paragraph</li>
-          <li>
-            Cards for:
-            <ul>
-              <li>Architectural Design</li>
-              <li>Interior Design</li>
-              <li>Planning & Permits</li>
+      <div class="row gtr-50 gtr-uniform">
+        <div class="col-4 col-12-medium">
+          <article class="project-card">
+            <header class="major">
+              <h2><a href={`${baseUrl}architectural-design`}>Architectural Design</a></h2>
+            </header>
+            <p>
+              Custom homes, renovations, and additions across the GTA and
+              Ontario &mdash; from concept through design development,
+              permit drawings, and construction support. Zoning and
+              feasibility are part of the service, not a separate step.
+            </p>
+            <ul class="actions">
+              <li><a href={`${baseUrl}architectural-design`} class="button">Learn more</a></li>
             </ul>
-          </li>
-          <li>Each card links to a dedicated page</li>
-        </ul>
+          </article>
+        </div>
 
-        <p><strong>Implementation notes</strong></p>
-        <ul>
-          <li>Keep minimal</li>
-          <li>Not an SEO-heavy page</li>
-        </ul>
+        <div class="col-4 col-12-medium">
+          <article class="project-card">
+            <header class="major">
+              <h2><a href={`${baseUrl}interior-design`}>Interior Design</a></h2>
+            </header>
+            <p>
+              Residential interiors developed alongside the architecture:
+              space planning, materials and finishes, built-ins, kitchens,
+              and bathrooms. Available as part of a full project or as a
+              standalone interior engagement.
+            </p>
+            <ul class="actions">
+              <li><a href={`${baseUrl}interior-design`} class="button">Learn more</a></li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="col-4 col-12-medium">
+          <article class="project-card">
+            <header class="major">
+              <h2><a href={`${baseUrl}building-permits`}>Planning &amp; Building Permits</a></h2>
+            </header>
+            <p>
+              Zoning review, feasibility studies, and permit drawings for
+              Ontario municipalities &mdash; including additions, secondary
+              suites, and laneway houses. The quiet, technical work that
+              gets projects approved.
+            </p>
+            <ul class="actions">
+              <li><a href={`${baseUrl}building-permits`} class="button">Learn more</a></li>
+            </ul>
+          </article>
+        </div>
       </div>
+
+      <p>
+        Not sure which service fits your project? A short
+        <a href={`${baseUrl}contact`}>consultation</a> is usually the
+        quickest way to find out.
+      </p>
     </div>
   </section>
 </BaseLayout>
-
