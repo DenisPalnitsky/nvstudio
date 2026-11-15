@@ -2989,6 +2989,22 @@ body.is-preload #header.alt {
 }
 #banner h1 {
   font-size: 3.25em;
+  color: #ffffff;
+}
+#banner header.major > h1:after {
+  background-color: #ffffff;
+}
+#banner > .inner .content p {
+  color: #ffffff;
+}
+#banner .button:not(.primary) {
+  box-shadow: inset 0 0 0 2px #ffffff;
+  color: #ffffff;
+}
+#banner .button:not(.primary):hover,
+#banner .button:not(.primary):active {
+  background-color: #ffffff;
+  color: #1a1a1a;
 }
 #banner > .inner {
   -moz-transition: opacity 1.5s ease, -moz-transform 0.5s ease-out, -moz-filter 0.5s ease, -webkit-filter 0.5s ease;
